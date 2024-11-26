@@ -15,6 +15,8 @@
                 </span>
                 <span class="text">Tambah Kategori</span>
               </button>
+
+              
         </div>
         <!-- Modal -->
         <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -28,8 +30,8 @@
                     <form action="/admin/kategori" method="post">
                         @csrf
                         <div class="form-group pt-4">
-                            <input type="text" class="form-control @error('kategori') is-invalid @enderror" id="kategori" name="kategori" placeholder="  Nama Kategori" required>
-                                @error('kategori')
+                            <input type="text" class="form-control @error('name') is-invalid @enderror" id="name" name="name" placeholder="  Nama Kategori" required>
+                                @error('name')
                                     <div class="invalid-feedback">
                                         {{ $message }}
                                     </div>

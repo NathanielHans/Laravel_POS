@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\KategoriController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,6 +17,4 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('home');
 });
-Route::get('/admin/kategori', function () {
-    return view('admin.kategori');
-});
+Route::resource('/admin/kategori',KategoriController::class);
